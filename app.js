@@ -53,3 +53,11 @@ window.addEventListener('resize', () => {
 
 drumkit.addEventListener('click', playDrum);
 drumkit.addEventListener('touchstart', playDrum);
+
+
+window.addEventListener('keydown', function(e){
+  const audio = document.querySelector(`div[data-key="${e.keyCode}"]`);
+  if(!audio) return;
+  drums.play(audio.dataset.sound);
+  console.log(e.keyCode);
+})

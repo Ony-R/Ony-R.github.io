@@ -15,17 +15,9 @@ body {
     height: calc(var(--vh, 1vh) * 100);
 }
 
-/* for mobile */
-@media screen and (max-width: 480px) {
-    .drumkit {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-    }
-}
-
 .pad {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 10px;
@@ -39,3 +31,18 @@ body {
     pointer-events: none;
 }
 
+.pad p {
+    color: white;
+}
+
+/* for mobile */
+@media screen and (max-width: 500px) {
+    .drumkit {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+    .pad p {
+        display: none;
+    }
+}
